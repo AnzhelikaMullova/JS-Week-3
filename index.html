@@ -11,7 +11,7 @@
 
 <body>
     <h1>Корзина</h1>
-    <div class="blazer">
+    <div class="blazer" id="blazerId">
         <img src="assets/img/blazer.webp" alt="blazer">
         <div class="description-blazer">
             <h2 class="description-blazer__title">Пиджак</h2>
@@ -19,9 +19,9 @@
             <p class="description-blazer__size">Размер: XS</p>
             <p class="description-blazer__col">Количество: 1шт</p>
         </div>
-        <p class="price">8000</p>
+        <p class="price" id="priceBlazerId">8000</p>
     </div>
-    <div class="hoodie">
+    <div class="hoodie" id="hoodieId">
         <img src="assets/img/hoodie.png" alt="hoodie">
         <div class="description-hoodie">
             <h2 class="description-hoodie__title">Толстовка</h2>
@@ -29,10 +29,10 @@
             <p class="description-hoodie__size">Размер: XS</p>
             <p class="description-hoodie__col">Количество: 1шт</p>
         </div>
-        <p class="price">13300</p>
+        <p class="price" id="priseHoodieId">13300</p>
     </div>
 
-    <div class="sneakers">
+    <div class="sneakers" id="sneakersId">
         <img src="assets/img/sneakers.png" alt="sneakers">
         <div class="description-sneakers">
             <h3 class="description-sneakers__title">Кеды</h3>
@@ -40,9 +40,9 @@
             <p class="description-sneakers__size">Размер: 36</p>
             <p class="description-sneakers__col">Количество: 1шт</p>
         </div>
-        <p class="price">5000</p>
+        <p class="price" id="priseSneakersId">5000</p>
     </div>
-    <div class="trench">
+    <div class="trench" id="trenchId">
 
         <img src="assets/img/trench.png" alt="trench">
         <div class="description-trench">
@@ -51,7 +51,7 @@
             <p class="description-trench__size">Размер: XS</p>
             <p class="description-trench__col">Количество: 1шт</p>
         </div>
-        <p class="price">28000</p>
+        <p class="price" id="priceTrenchId">28000</p>
     </div>
 
     <div>
@@ -63,11 +63,26 @@
 
 
     <script>
-        let priseBlazer = 8000;
-        let priseHoodie = 13300;
-        let priseSneakers = 5000;
-        let priceTrench = 28000;
+        let item1 = Number(document.getElementById('priceBlazerId').innerHTML);
+        let item2 = Number(document.getElementById('priseHoodieId').innerHTML);
+        let item3 = Number(document.getElementById('priseSneakersId').innerHTML);
+        let item4 = Number(document.getElementById('priceTrenchId').innerHTML);
+
+
+
+
+        console.log(item1);
+        console.log(item2);
+        console.log(item3);
+        console.log(item4);
+
+        function sum(item1, item2, item3, item4) {
+
+            sum = item1 + item2 + item3 + item4;
+        }
+        console.log(sum(item1, item2, item3, item4));
     </script>
 </body>
 
-</html>
+</html>.
+DS
