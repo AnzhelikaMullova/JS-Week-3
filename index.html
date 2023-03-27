@@ -54,11 +54,19 @@
         <p class="price" id="priceTrenchId">28000</p>
     </div>
 
-    <div>
-        <button>Использовать скидку 20%</button>
-        <p>Итого:</p>
+
+    <div class="result">
+        <p>Сумма вашей покупки:
+        </p>
+        <p id="sumResultId"></p>
     </div>
-    <div class="result"></div>
+
+
+    <div>
+        <button onclick="countDiscount(sumProduct)" id="buttunSale" type="button">Использовать скидку 20%</button>
+        <p>Сумма со скидкой составляет:</p>
+        <p class="buttonsale" id="ItogSaleId"></p>
+    </div>
 
 
 
@@ -68,21 +76,23 @@
         let item3 = Number(document.getElementById('priseSneakersId').innerHTML);
         let item4 = Number(document.getElementById('priceTrenchId').innerHTML);
 
-
-
-
         console.log(item1);
         console.log(item2);
         console.log(item3);
         console.log(item4);
 
-        function sum(item1, item2, item3, item4) {
 
-            sum = item1 + item2 + item3 + item4;
+        let sumProduct = item1 + item2 + item3 + item4;
+        console.log(sumProduct);
+
+        let sumResult = document.getElementById('sumResultId').innerHTML = sumProduct;
+        console.log(sumResult);
+
+        function countDiscount(sumProduct) {
+            let sumSale = sumProduct * 0.8;
+            let sale = document.getElementById('ItogSaleId').innerHTML = sumSale;
         }
-        console.log(sum(item1, item2, item3, item4));
     </script>
 </body>
 
-</html>.
-DS
+</html>
