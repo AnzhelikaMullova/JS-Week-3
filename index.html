@@ -64,13 +64,70 @@
 
     <div>
         <button onclick="countDiscount(sumProduct)" id="buttunSale" type="button">Использовать скидку 20%</button>
-        <p>Сумма со скидкой составляет:</p>
-        <p class="buttonsale" id="ItogSaleId"></p>
+        <!-- <p>Сумма со скидкой составляет:</p>
+        <p class="buttonsale" id="ItogSaleId"></p> -->
     </div>
 
-
-
     <script>
+        let item1 = Number(document.getElementById('priceBlazerId').innerHTML);
+        let item2 = Number(document.getElementById('priseHoodieId').innerHTML);
+        let item3 = Number(document.getElementById('priseSneakersId').innerHTML);
+        let item4 = Number(document.getElementById('priceTrenchId').innerHTML);
+        let sumProduct = item1 + item2 + item3 + item4;
+
+        item1 = item1 * 0.8;
+        item2 = item2 * 0.8;
+        item3 = item3 * 0.8;
+        item4 = item4 * 0.8;
+
+        console.log(item1);
+        console.log(item2);
+        console.log(item3);
+        console.log(item4);
+
+
+        // let sumProduct = item1 + item2 + item3 + item4;
+        // console.log(sumProduct);
+
+        let sumResult = document.getElementById('sumResultId').innerHTML = sumProduct;
+        console.log(sumResult);
+
+        function countDiscount(sumProduct) {
+
+
+            document.getElementById('sumResultId').innerHTML = item1 + item2 + item3 + item4;
+            document.getElementById('priceBlazerId').innerHTML = item1;
+            document.getElementById('priseHoodieId').innerHTML = item2;
+            document.getElementById('priseSneakersId').innerHTML = item3;
+            document.getElementById('priceTrenchId').innerHTML = item4;
+
+
+            // let sumSale = sumProduct * 0.8;
+            // let sale = document.getElementById('ItogSaleId').innerHTML = sumSale;
+
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script>
         let item1 = Number(document.getElementById('priceBlazerId').innerHTML);
         let item2 = Number(document.getElementById('priseHoodieId').innerHTML);
         let item3 = Number(document.getElementById('priseSneakersId').innerHTML);
@@ -92,7 +149,7 @@
             let sumSale = sumProduct * 0.8;
             let sale = document.getElementById('ItogSaleId').innerHTML = sumSale;
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
